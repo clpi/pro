@@ -1,0 +1,24 @@
+[package]
+name = "pr-cfg"
+version.workspace = true
+edition.workspace = true
+default-run = "pr-cfg"
+
+[lib]
+name = "pr_cfg"
+path = "src/lib.rs"
+
+[[bin]]
+name = "pr-cfg"
+path = "src/bin/main.rs"
+
+[dependencies]
+anyhow.workspace = true
+dirs.workspace = true
+rkyv = { version = "0.7.44", features = ["uuid", "smol_str"] }
+serde = { version = "1.0.197", features = ["derive"] }
+strum = { version = "0.26.2", features = ["derive"] }
+tempfile = "3.10.1"
+toml = { version = "0.8.11", features = ["indexmap", "preserve_order"] }
+tracing.workspace = true
+uuid = { version = "1.7.0", features = ["v7", "js", "fast-rng", "zerocopy", "serde"] }

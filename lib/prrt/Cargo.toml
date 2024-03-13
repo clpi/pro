@@ -1,0 +1,18 @@
+[package]
+name = "pr-rt"
+version.workspace = true
+edition.workspace = true
+default-run = "pr-rt-ex"
+
+[lib]
+name = "pr_rt"
+path = "src/lib.rs"
+
+[[bin]]
+name = "pr-rt-ex"
+path = "src/bin/main.rs"
+
+[dependencies]
+anyhow.workspace = true
+uuid = { version = "1.7.0", features = ["v7", "fast-rng", "zerocopy", "serde"] }
+pr-core = { path = "../prcore"}

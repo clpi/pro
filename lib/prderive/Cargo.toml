@@ -1,0 +1,16 @@
+[package]
+name= "pr-derive"
+version.workspace = true
+edition.workspace = true
+default-run = "pr-derive-ex"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+name   = "pr_derive"
+path = "src/lib.rs"
+
+[[bin]]
+name = "pr-derive-ex"
+path = "src/bin/main.rs"
+
+[dependencies]

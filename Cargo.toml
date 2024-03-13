@@ -1,0 +1,35 @@
+[workspace.package]
+name = "pro"
+version = "0.1.0"
+edition = "2021"
+default-run = "pr-cli"
+
+[workspace]
+members = ["lib/*"]
+resolver = "2"
+
+[workspace.dependencies]
+pr-cfg = { path = "./lib/prcfg"}
+pr-parse = { path = "./lib/prparse"}
+pr-cli = { path = "./lib/prcli"}
+pr-derive = { path = "lib/prderive"}
+pr-rt = { path = "lib/prrt"}
+pr-core = { path = "lib/prcore"}
+
+anyhow = { version = "1.0.80", features = ["backtrace"] }
+cuckoofilter = "0.5.0"
+dirs = "5.0.1"
+slab = "0.4.9"
+indexmap = "2.2.5"
+itertools = "0.12.1"
+pathfinding = "4.9.1"
+petgraph = { version = "0.6.4", features = ["all"] }
+priority-queue = "2.0.2"
+tokio = { version = "1.36.0", features = ["full", "tracing"] }
+tokio-stream = { version = "0.1.14", features = ["full"] }
+tracing = { version = "0.1.40", features = ["log"] }
+tracing-subscriber = { version = "0.3.18", features = ["json", "ansi", "env-filter"] }
+
+# [dependencies.lib]
+# async-channel = "2.2.0"
+# slab = "0.4.9"

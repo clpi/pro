@@ -1,0 +1,24 @@
+[package]
+name = "pr-cli"
+version.workspace = true
+edition.workspace = true
+default-run = "pr-cli"
+
+[lib]
+name = "pr_cli"
+path = "src/lib.rs"
+
+[[bin]]
+name = "pr-cli"
+path = "src/bin/cli.rs"
+
+[dependencies]
+anyhow.workspace = true
+clap = { version = "4.5.2", features = ["derive", "unicode", "wrap_help", "env", "string", "unstable-styles"] }
+pr-cfg = { path = "../prcfg" }
+pr-rt = { path = "../prrt" }
+pr-core = { path = "../prcore" }
+pr-parse = { path = "../prparse" }
+tracing.workspace = true
+tracing-subscriber.workspace = true
+strum = { version = "0.26.2", features = ["derive"] }

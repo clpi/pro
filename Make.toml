@@ -1,0 +1,6 @@
+[env]
+RUSTFLAGS="--cfg uuid_unstable"
+
+[tasks.run]
+
+

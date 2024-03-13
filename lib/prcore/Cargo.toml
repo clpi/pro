@@ -1,0 +1,20 @@
+[package]
+name = "pr-core"
+version = "0.1.0"
+edition = "2021"
+default_run = "pr_core_main"
+
+[lib]
+name = "pr_core"
+path = "src/lib.rs"
+
+[[bin]]
+name = "pr_core_main"
+path = "src/bin/main.rs"
+
+[dependencies]
+anyhow = { workspace = true }
+pr-derive = { path = "../prderive", workspace = true }
+slab.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true

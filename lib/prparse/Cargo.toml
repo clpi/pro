@@ -1,0 +1,18 @@
+[package]
+name = "pr-parse"
+version = "0.1.0"
+edition = "2021"
+default-run = "pr-parse-ex"
+
+[[bin]]
+name = "pr-parse-ex"
+path = "src/bin/main.rs"
+
+[lib]
+name = "pr_parse"
+path = "src/lib.rs"
+
+[dependencies]
+anyhow.workspace = true
+pr-core = { path = "../prcore" }
+logos = "0.14.0"
